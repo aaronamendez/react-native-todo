@@ -10,6 +10,7 @@ import {
 	TouchableOpacity,
 	Keyboard,
 	Touchable,
+	ScrollView,
 } from 'react-native';
 import { Task } from './components/Task';
 
@@ -34,7 +35,7 @@ export default function App() {
 			{/* Today's Tasks */}
 			<View style={styles.tasksWrapper}>
 				<Text style={styles.sectionTitle}>Today's Tasks</Text>
-				<View style={styles.items}>
+				<ScrollView style={styles.items}>
 					{/* This is where the tasks will go! */}
 					{taskItems.map((item, index) => {
 						return (
@@ -46,7 +47,7 @@ export default function App() {
 							</TouchableOpacity>
 						);
 					})}
-				</View>
+				</ScrollView>
 			</View>
 			{/* Write a Task */}
 			<KeyboardAvoidingView
@@ -77,6 +78,7 @@ const styles = StyleSheet.create({
 	tasksWrapper: {
 		paddingTop: 80,
 		paddingHorizontal: 20,
+		maxHeight: '80%',
 	},
 	sectionTitle: {
 		fontSize: 24,
