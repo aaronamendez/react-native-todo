@@ -107,12 +107,14 @@ const styles = StyleSheet.create({
 	addWrapper: {
 		width: 60,
 		height: 60,
-		backgroundColor: '#FFF',
+		backgroundColor: '#22e07b',
 		borderRadius: 60,
 		justifyContent: 'center',
 		alignItems: 'center',
 		borderColor: '#C0C0C0',
 		borderWidth: 1,
 	},
-	addText: {},
+	addText: {
+		color: '#FFF',
+	},
 });
